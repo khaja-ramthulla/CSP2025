@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Photos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <!-- Scrolling Bar -->
+     <div class="scrolling-bar">
+        <span>
+            Community Service Project | Identification of Students from Schools/Colleges Who Need Tuition | Empowering Education for All
+        </span>
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="introduction.html" class="nav-link">Introduction</a></li>
+            <li class="nav-item"><a href="survey-data.html" class="nav-link">Survey Details</a></li>
+            <li class="nav-item"><a href="questionnaire.html" class="nav-link">Questionnaire</a></li>
+            <li class="nav-item"><a href="visualization.html" class="nav-link">Visualization</a></li>
+            <li class="nav-item"><a href="survey-photos.html" class="nav-link active">Survey Photos</a></li>
+            <li class="nav-item"><a href="conclusion.html" class="nav-link">Conclusion</a></li>
+            <li class="nav-item"><a href="team.html" class="nav-link active">Our Team</a></li>
+        </ul>
+    </nav>
+
+    <!-- Survey Photos Section -->
+    <section class="content-section survey-photos">
+        <h2>Survey Photos</h2>
+        <p>Here are some moments captured during our survey process:</p>
+        
+        <!-- Photo Grid -->
+        <div class="photo-grid">
+            <div class="photo-item">
+                <img src="csp1.jpg" alt="Survey Photo 1" onclick="openLightbox('csp1.jpg')">
+                <p class="photo-caption">Students filling out survey forms.</p>
+            </div>
+            <div class="photo-item">
+                <img src="csp2.jpg" alt="Survey Photo 2" onclick="openLightbox('csp2.jpg')">
+                <p class="photo-caption">Group discussion during the survey.</p>
+            </div>
+            <div class="photo-item">
+                <img src="csp3.jpg" alt="Survey Photo 3" onclick="openLightbox('csp3.jpg')">
+                <p class="photo-caption">Community members sharing their thoughts.</p>
+            </div>
+            <div class="photo-item">
+                <img src="csp4.jpg" alt="Survey Photo 4" onclick="openLightbox('csp4.jpg')">
+                <p class="photo-caption">Team conducting interviews.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- JavaScript for Lightbox -->
+    <script>
+        // Function to open the lightbox
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'block';
+            lightboxImg.src = imageSrc;
+        }
+
+        // Function to close the lightbox
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
+    <!-- Copyright Notice -->
+    <footer>
+        <p>&copy; Community Service Project 2025</p>
+    </footer>
+</body>
+</html>
